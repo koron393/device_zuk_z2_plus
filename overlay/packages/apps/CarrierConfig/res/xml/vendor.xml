@@ -1,11 +1,17 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- This is a place for vendor-specific config values. The format and
+     filtering rules are the same as those in carrier_config*.xml files. This
+     file is read after any specific config file from the assets folder, so it
+     must use explicit filters for MCC ad MNC if that is desired. -->
 <carrier_config_list>
-    <carrier_config>
+    <carrier_config mcc="440" mnc="51">
         <!-- Flag indicating if the phone is a world phone -->
         <boolean name="world_phone_bool" value="true" />
         <!-- Flag indicating if dtmf tone type is enabled -->
         <bool name="dtmf_type_enabled_bool">true</bool>
         <!-- Show cdma auto network mode in (global) roaming -->
         <boolean name="show_cdma_choices_bool" value="true" />
+        <!-- Flag indicating if volte is enabled -->
+        <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 </carrier_config_list>
