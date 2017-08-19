@@ -4,14 +4,24 @@
      file is read after any specific config file from the assets folder, so it
      must use explicit filters for MCC ad MNC if that is desired. -->
 <carrier_config_list>
-    <carrier_config mcc="440" mnc="51">
+
+    <carrier_config>
         <!-- Flag indicating if the phone is a world phone -->
         <boolean name="world_phone_bool" value="true" />
         <!-- Flag indicating if dtmf tone type is enabled -->
         <bool name="dtmf_type_enabled_bool">true</bool>
         <!-- Show cdma auto network mode in (global) roaming -->
         <boolean name="show_cdma_choices_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="440" mnc="10">
+        <!-- Flag indicating if volte is provisioned -->
+        <boolean name="carrier_volte_provisioning_required_bool" value="false" />
+    </carrier_config>
+
+    <carrier_config mcc="440" mnc="51">
         <!-- Flag indicating if volte is enabled -->
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
+
 </carrier_config_list>
